@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Make Every Drop Count | Charity Landing (HTML + CSS only)</title>
+  <meta name="description" content="Your gift turns real stories into real change—bringing clean water and brighter futures to communities around the world." />
+  <meta property="og:title" content="Make Every Drop Count" />
+  <meta property="og:description" content="Your gift turns real stories into real change—bringing clean water and brighter futures to communities around the world." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffc907" />
+  <style>
+    :root{
+      --brand-yellow:#ffc907;
+      --brand-orange:#bf6c46;
+      --brand-blue:#003366;
+      --donate-card-bg:#fff7e1;
+      --ink:#0f172a;
+      --ink-2:#334155;
+      --bg:#ffffff;
+      --bg-alt:#f8fafc;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(2,6,23,.10);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:"Avenir Next", Avenir, "Proxima Nova", Georgia, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{color:var(--brand-blue);text-decoration:none}
+    .container{max-width:1120px;margin-inline:auto;padding:24px}
+    .btn{
+      display:inline-block;
+      background:var(--brand-yellow);
+      color:#111827;
+      font-weight:700;
+      padding:14px 20px;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+      border:0;
+      cursor:pointer;
+      font-size:16px;
+      text-align:center;
+    }
+    header{
+      position:sticky;
+      top:0;
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;
+      z-index:10;
+      padding:10px 24px;
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav .logo{display:flex;align-items:center;gap:10px}
+    .nav .logo img{height:40px;width:auto;display:block}
+    .nav .links{display:flex;gap:24px;align-items:center;font-size:17px}
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:32px;
+      padding:48px 24px;
+      background:var(--brand-orange);
+      color:#fff;
+      align-items:center;
+    }
+    h1{font-size:clamp(30px,5vw,44px);line-height:1.15;margin:14px 0 10px;font-weight:700}
+    .sub{font-size:clamp(16px,2.3vw,19px);color:#f9fafb;max-width:55ch}
+    .hero img{width:100%;height:100%;max-height:520px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .donate-block{
+      background:var(--brand-blue);
+      padding:32px;
+      border-radius:var(--radius);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      margin:32px auto;
+      max-width:600px;
+      box-shadow:var(--shadow);
+    }
+    .donate-card{
+      background:var(--donate-card-bg);
+      padding:24px;
+      border-radius:var(--radius);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      box-shadow:var(--shadow);
+      width:100%;
+      border:2px solid #11182720;
+    }
+    .donate-title{color:#111827;font-weight:700;font-size:22px;letter-spacing:.2px;margin:0 0 10px}
+    .donate-divider{height:2px;background:#11182730;width:100%;border-radius:2px}
+    .donate-options{display:flex;gap:14px;margin-top:12px;flex-wrap:wrap;justify-content:center}
+    .donate-options .btn{background:var(--brand-yellow);color:#111827;min-width:140px;font-size:18px;padding:16px 22px;border-radius:28px}
+    footer{background:var(--bg-alt);border-top:1px solid #e5e7eb;padding:32px 24px;text-align:center;color:var(--ink-2)}
+    @media(max-width:800px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      .hero img{margin-top:16px}
+      .nav .links{gap:14px;font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <div class="logo">
+        <img src="charity-water-seeklogo.png" alt="charity: water logo">
+      </div>
+      <div class="links">
+        <a href="#donate">Take Action</a>
+        <a href="#about">About Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Make every drop count.<br>Transform lives with Clean Water.</h1>
+        <p class="sub">Your gift turns real stories into real change – bringing clean water and brighter futures to communities around the world.</p>
+      </div>
+      <img src="hero.jpg" alt="Smiling child collecting clean water">
+    </section>
+
+    <section id="donate" class="container">
+      <div class="donate-block">
+        <div class="donate-card">
+          <h2 class="donate-title">choose an amount to donate</h2>
+          <div class="donate-divider"></div>
+          <div class="donate-options">
+            <a class="btn" href="#">$10 USD/mo</a>
+            <a class="btn" href="#">$20 USD/mo</a>
+          </div>
+          <a class="btn" href="#" style="width:80%;margin-top:12px;text-align:center">Make a difference</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="about" class="container" style="padding-top:0">
+    <p style="color:var(--ink-2)">This student project demonstrates a charity landing page layout using only HTML & CSS.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 charity: water • Demo site for Nova & Carlos</p>
+  </footer>
+</body>
+</html>
